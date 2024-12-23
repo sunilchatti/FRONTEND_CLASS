@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     
 
     <style>
@@ -37,6 +37,7 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
+            cursor: pointer;
 
         }
 
@@ -44,14 +45,23 @@
             background-color: blue;
             color: white;
             border: none;
-            cursor: pointer;
+            
+        
         }
 
+        button:hover{
+            background-color: green;
+        }
+
+        .error{
+            color: red;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
     <h1>Registration form</h1>
-    <form action="">
+    <form action="/submit" id="myForm" method="post">
         <label for="name">NAME:</label>
         <input type="text" id="name" name="name" placeholder="Enter your Name">
 
@@ -68,6 +78,18 @@
             <option value="Female">Female</option>
         </select>
 
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+
+        
+        <label for="css">CSS</label>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+
+        
+        <label for="javascript">JavaScript</label>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+
+        
         <label for="address">Address</label>
         <textarea name="address" id="address" cols="10" rows="5" placeholder="Enter your adress"></textarea>
 
@@ -75,6 +97,11 @@
 
         <p id="errorAddress" class="error"></p>
     </form>
+
+    <script>
+        const form = document.getElementById("myForm")
+        const errorAddress = document.getElementById("")
+    </script>
 
 </body>
 </html>
