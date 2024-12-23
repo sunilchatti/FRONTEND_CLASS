@@ -4,12 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        form{
+            max-width: 400px;
+            margin: auto;
+            padding: 50px;
+            border: 2px solid blueviolet;
+            border-radius: 50px;
+            box-shadow: 2px 2px 12px rgb(226, 7, 43);
+            -webkit-box-shadow: 10px 10px 5px 0px rgb(214, 21, 214, 1);
+            -moz-box-shadow: 10px 10px 5px 0px rgb(214, 21, 214, 1);
+            box-shadow: 10px 10px 5px 0px rgb(214, 21, 214, 1);
+        }
+
+        label{
+            display: block;
+            margin-top: 10px 0 5px;
+            border-radius: 5px;
+        }
+
+        input,textarea,select,button{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Welcome to html</h1>
-    <h6>Hey</h6>
-    <h2>HI</h2>
-    <h3>HELLO</h3>
-    <H4>CSS</H4>
+    <h1>Registration form</h1>
+    <form action="">
+        <label for="name">NAME:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="name" name="email">
+
+        <label for="pasSword">PASSWORD:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="gender">GENDER:</label>
+        <select name="gender" id="gender" required>
+            <option value="">select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="10" rows="5" placeholder="Enter your adress"></textarea>
+
+        <button type="submit">SUBMIT</button>
+
+        <p id="errorAddress" class="error"></p>
+    </form>
+
 </body>
 </html>
