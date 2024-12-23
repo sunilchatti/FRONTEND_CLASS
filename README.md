@@ -1,2 +1,0 @@
-# Frontend_Class
- frontend
